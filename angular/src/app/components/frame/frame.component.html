@@ -1,0 +1,208 @@
+<mat-toolbar class="header">
+  <button mat-icon-button class="menu-button-fix" fxHide.gt-md fxShow>
+    <mat-icon aria-label="Menu" (click)="sidenav.toggle()">menu</mat-icon>
+  </button>
+  <div class="header-logo" fxHide fxShow.gt-xs>
+    <img src="/assets/images/logo.png" alt="Disaster Preparedness Plan" />
+  </div>
+  <div class="header-logo mobile-logo" fxHide.gt-xs fxShow>
+    <img src="/assets/images/logo.png" width="45px" alt="Disaster Preparedness Plan" />
+  </div>
+  <div fxHide fxShow.gt-xs>
+    <p class="title-line">Disaster</p>
+    <p class="title-line">Preparedness</p>
+    <p class="title-line">Plan</p>
+  </div>
+  <div fxHide.gt-xs fxShow>
+    <p class="title-line mobile-title">Disaster</p>
+    <p class="title-line mobile-title">Preparedness</p>
+    <p class="title-line mobile-title">Plan</p>
+  </div>
+  <div class="operations">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <i class="material-icons big-icon">person</i>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon matSuffix>person_pin</mat-icon>
+        <span>{{username}}</span>
+      </button>
+      <button mat-menu-item (click)="openMemoDialog()">
+        <mat-icon matSuffix>message</mat-icon>
+        <span>Add Memo</span>
+      </button>
+      <button mat-menu-item (click)="Logout()">
+        <mat-icon matSuffix>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+
+<mat-sidenav-container >
+  <mat-sidenav #sidenav mode="over" fxHide.gt-md fxShow>
+    <div class="sidebar" fxFlex="none">
+      <div class="sidebar-nav" routerLink="/info/basic" routerLinkActive="active">
+        <a class="nav-text">Basic Information</a>
+      </div>
+      <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/family" routerLinkActive="active">
+        <a class="nav-text">Family Members</a>
+      </div>
+      <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/water" routerLinkActive="active">
+        <a class="nav-text">Water</a>
+      </div>
+      <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/food" routerLinkActive="active">
+        <a class="nav-text">Food</a>
+      </div>
+      <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/clothing" routerLinkActive="active">
+        <a class="nav-text">Clothing & Bedding</a>
+      </div>
+      <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/storage" routerLinkActive="active">
+        <a class="nav-text">Storage</a>
+      </div>
+      <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/travel" routerLinkActive="active">
+        <a class="nav-text">Travel & Office</a>
+      </div>
+      <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/authority" routerLinkActive="active">
+        <a class="nav-text">Emergency Authorities</a>
+      </div>
+      <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/communication" routerLinkActive="active">
+        <a class="nav-text">Communication</a>
+      </div>
+      <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/tips" routerLinkActive="active">
+        <a class="nav-text">Tips</a>
+      </div>
+      <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/memo" routerLinkActive="active">
+        <a class="nav-text">Memo</a>
+      </div>
+      <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/print" routerLinkActive="active">
+        <a class="nav-text">Print</a>
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="0" fxLayoutGap.xs="0">
+      <div class="sidebar" fxFlex="none" fxHide fxShow.gt-md>
+        <div class="sidebar-nav" routerLink="/info/basic" routerLinkActive="active">
+          <a class="nav-text">Basic Information</a>
+        </div>
+        <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/family" routerLinkActive="active">
+          <a class="nav-text">Family Members</a>
+        </div>
+        <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/water" routerLinkActive="active">
+          <a class="nav-text">Water</a>
+        </div>
+        <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/food" routerLinkActive="active">
+          <a class="nav-text">Food</a>
+        </div>
+        <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/clothing" routerLinkActive="active">
+          <a class="nav-text">Clothing & Bedding</a>
+        </div>
+        <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/storage" routerLinkActive="active">
+          <a class="nav-text">Storage</a>
+        </div>
+        <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/travel" routerLinkActive="active">
+          <a class="nav-text">Travel & Office</a>
+        </div>
+        <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/authority" routerLinkActive="active">
+          <a class="nav-text">Emergency Authorities</a>
+        </div>
+        <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/communication" routerLinkActive="active">
+          <a class="nav-text">Communication</a>
+        </div>
+        <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/tips" routerLinkActive="active">
+          <a class="nav-text">Tips</a>
+        </div>
+        <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/memo" routerLinkActive="active">
+          <a class="nav-text">Memo</a>
+        </div>
+        <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/print" routerLinkActive="active">
+          <a class="nav-text">Print</a>
+        </div>
+      </div>
+      <div class="container" fxFlex="auto">
+        <main>
+          <div class="printer" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="0" fxLayoutGap.xs="0">
+            <div fxFlex="5" fxHide fxShow.gt-md></div>
+            <div class="printer-left lp" fxFlex="none" fxHide fxShow.gt-xs></div>
+            <div class="printer-middle" fxFlex="auto"></div>
+            <div class="printer-right rp" fxFlex="none" fxHide fxShow.gt-xs></div>
+            <div fxFlex="5" fxHide fxShow.gt-md></div>
+          </div>
+          <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="0" fxLayoutGap.xs="0">
+            <div fxFlex="5" fxHide fxShow.gt-md></div>
+            <div class="lp" fxFlex="none" fxHide fxShow.gt-xs></div>
+            <div class="paper" fxFlex="auto">
+              <router-outlet></router-outlet>
+            </div>
+            <div class="rp" fxFlex="none" fxHide fxShow.gt-xs></div>
+            <div fxFlex="5" fxHide fxShow.gt-md></div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!--
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="0" fxLayoutGap.xs="0">
+  <div class="sidebar" fxFlex="none" fxHide fxShow.gt-md>
+    <div class="sidebar-nav" routerLink="/info/basic" routerLinkActive="active">
+      <a class="nav-text">Basic Information</a>
+    </div>
+    <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/family" routerLinkActive="active">
+      <a class="nav-text">Family Members</a>
+    </div>
+    <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/water" routerLinkActive="active">
+      <a class="nav-text">Water</a>
+    </div>
+    <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/food" routerLinkActive="active">
+      <a class="nav-text">Food</a>
+    </div>
+    <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/clothing" routerLinkActive="active">
+      <a class="nav-text">Clothing & Bedding</a>
+    </div>
+    <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/storage" routerLinkActive="active">
+      <a class="nav-text">Storage</a>
+    </div>
+    <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/travel" routerLinkActive="active">
+      <a class="nav-text">Travel & Office</a>
+    </div>
+    <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/authority" routerLinkActive="active">
+      <a class="nav-text">Emergency Authorities</a>
+    </div>
+    <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/communication" routerLinkActive="active">
+      <a class="nav-text">Communication</a>
+    </div>
+    <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/tips" routerLinkActive="active">
+      <a class="nav-text">Tips</a>
+    </div>
+    <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/memo" routerLinkActive="active">
+      <a class="nav-text">Memo</a>
+    </div>
+    <div [ngClass]="{'disabled-menu': !global.exist}" class="sidebar-nav" routerLink="/info/print" routerLinkActive="active">
+      <a class="nav-text">Print</a>
+    </div>
+  </div>
+  <div class="container" fxFlex="auto">
+    <main>
+      <div class="printer" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="0" fxLayoutGap.xs="0">
+        <div fxFlex="5" fxHide fxShow.gt-md></div>
+        <div class="printer-left lp" fxFlex="none" fxHide fxShow.gt-xs></div>
+        <div class="printer-middle" fxFlex="auto"></div>
+        <div class="printer-right rp" fxFlex="none" fxHide fxShow.gt-xs></div>
+        <div fxFlex="5" fxHide fxShow.gt-md></div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="0" fxLayoutGap.xs="0">
+        <div fxFlex="5" fxHide fxShow.gt-md></div>
+        <div class="lp" fxFlex="none" fxHide fxShow.gt-xs></div>
+        <div class="paper" fxFlex="auto">
+          <router-outlet></router-outlet>
+        </div>
+        <div class="rp" fxFlex="none" fxHide fxShow.gt-xs></div>
+        <div fxFlex="5" fxHide fxShow.gt-md></div>
+      </div>
+    </main>
+  </div>
+</div>
+-->

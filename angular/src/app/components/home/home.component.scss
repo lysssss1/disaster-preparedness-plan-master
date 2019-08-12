@@ -1,0 +1,64 @@
+.index-bg {
+  background: url("/assets/images/index-background.png");
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.book-wrapper {
+  background: url("/assets/images/book.png");
+  width: 858px;
+  height: 745px;
+}
+
+.book {
+  margin-top: 190px;
+}
+
+.logo {
+  margin-top: 270px;
+}
+
+.fix-book {
+  margin-left: -232px;
+}
+
+.fix-logo {
+  width: 100%;
+}
+
+.index-left {
+  text-align: center;
+}
+
+.form-wrapper {
+  height: 350px;
+  width: 376px;
+  position: relative;
+  left: 231px;
+  top: 99px;
+}
+
+.inner-form {
+  padding-top: 15px;
+  margin-left:28px;
+  width:320px;
+}
+
+.form-input {
+  width:100%;
+}
+
+::ng-deep .mat-tab-label, .mat-tab-link {
+    color:  #4A1500 !important;
+    font-size: 18px;
+    width: 160px;
+} 
+
+.center {
+  text-align:center;
+}
+
+::ng-deep .mat-tab-body-content {
+  overflow: hidden !important;
+}

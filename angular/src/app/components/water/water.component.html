@@ -1,0 +1,31 @@
+
+
+<div class="label l4">Water</div>
+<div class="wrapper" fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center" fxLayoutGap="0" fxLayoutGap.xs="0">
+  <div class="left-wrapper" fxFlexOrder="2" fxFlexOrder.gt-sm="1" fxFlex="60">
+    <div class="title-wrapper">
+      Prepare
+    </div>
+    <div>
+      <div class="water-left-content">
+        For Drinking
+        <br> For Food Preparation, Sanitation and Other Activities
+        <br> For Pets
+        <br>
+        <br> Total
+      </div>
+      <div class="water-right-content">
+        {{drinkwater.toFixed(2)}} Gallons
+        <br> {{foodwater.toFixed(2)}} Gallons
+        <br> {{petwater.toFixed(2)}} Gallons
+        <br>
+        <br> {{(drinkwater+foodwater+petwater).toFixed(2)}} Gallons
+      </div>
+    </div>
+  </div>
+  <div class="right-wrapper" fxFlexOrder="-2" fxFlexOrder.gt-sm="2" fxFlex="40">
+    <div class="title-wrapper">Chart</div>
+    <br>
+    <canvas #donut width="230" height="230"></canvas>
+  </div>
+</div>

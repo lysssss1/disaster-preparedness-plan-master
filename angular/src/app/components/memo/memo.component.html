@@ -1,0 +1,19 @@
+<div class="label l12">Memo</div>
+<div class="words-wrapper">
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let memo of memos">
+          <mat-expansion-panel-header class="specific-class">
+            <mat-panel-title>
+              {{memo.title}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="memo-content">
+            {{memo.content}}
+          </div>
+          <br>
+          <br>
+          <button (click)="update(memo)" class="form-button" matTooltip="Update memo">Update</button>
+          <button (click)="delete(memo)" class="form-button" matTooltip="Delete memo">Delete</button>
+        </mat-expansion-panel>
+      </mat-accordion>
+</div>

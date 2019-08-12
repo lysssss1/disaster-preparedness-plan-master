@@ -1,0 +1,78 @@
+.toggle {
+  cursor: pointer;
+}
+
+.nottoggled {
+  text-decoration: line-through;
+}
+
+.inner-print {
+  padding: 5%;
+}
+
+table {
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  background-color: #fff
+}
+
+table,
+th,
+td {
+  padding-left: 4%;
+  color: #8B2E00;
+  line-height: 2.0em;
+}
+
+th {
+  font-size: 18px;
+  color: #fff;
+  background-color: #8B2E00;
+  text-align: left;
+}
+
+td {
+  font-size: 15px;
+  color: #5B1C00;
+  border-top: solid 1px #E3C781;
+}
+
+td:hover {
+  color: #5B1C00;
+  background: #FCAB83;
+}
+
+.text {
+  color: #8B2E00;
+}
+
+.center {
+  text-align: center;
+}
+
+.side-button {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  font-size: 48px;
+}
+
+.side-tool {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  width: 50px;
+}
+
+@media print {
+  .nottoggled,
+  .nottoggled * {
+    display: none !important;
+  }
+}

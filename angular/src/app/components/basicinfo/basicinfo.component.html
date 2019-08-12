@@ -1,0 +1,39 @@
+<div class="label l2">Basic Information</div>
+<div class="words-wrapper">
+  <form [formGroup]="basic_form" (ngSubmit)="BasicUpdate()">
+    <div>
+      <div>
+        <mat-form-field class="half">
+          <mat-select formControlName="location" placeholder="Choose your location">
+            <mat-option value="Pittsburgh">Pittsburgh</mat-option>
+            <mat-option value="New York">New York</mat-option>
+            <mat-option value="Chicago">Chicago</mat-option>
+            <mat-option value="Boston">Boston</mat-option>
+            <mat-option value="Washington">Washington</mat-option>
+            <mat-option value="Los Angeles">Los Angeles</mat-option>
+            <mat-option value="Philadelphia">Philadelphia</mat-option>
+            <mat-option value="New Orleans">New Orleans</mat-option>
+            <mat-option value="Seattle">Seattle</mat-option>
+            <mat-option value="San Diego">San Diego</mat-option>
+            <mat-option value="Columbia">Columbia</mat-option>
+            <mat-option value="Minneapolis">Minneapolis</mat-option>
+          </mat-select>
+          <mat-error>This field is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="whole">
+          <input matInput formControlName="days" type="number" placeholder="Enter the range for your plan" required>
+          <span matSuffix>days</span>
+          <mat-error>This field is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div *ngIf="( basic_form.dirty && basic_form.valid )" class="form-submit">
+        <button type="submit" class="form-button" matTooltip="Update basic information">Submit</button>
+        <button type="button" (click)="reset()" class="form-button" matTooltip="Reset the form">Reset</button>
+      </div>
+      <div *ngIf="( !basic_form.dirty || !basic_form.valid )" class="form-submit">
+        <button type="button" class="form-button disabled" matTooltip="Please fill out the form!">Submit</button>
+        <button type="button" (click)="reset()" class="form-button" matTooltip="Reset the form">Reset</button>
+      </div>
+    </div>
+  </form>
+</div>

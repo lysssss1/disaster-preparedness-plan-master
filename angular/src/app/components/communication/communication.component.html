@@ -1,0 +1,62 @@
+<div class="label l10">Communication</div>
+<div class="wrapper" fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center" fxLayoutGap="0" fxLayoutGap.xs="0">
+  <div class="left-wrapper" fxFlexOrder="2" fxFlexOrder.gt-sm="1" fxFlex="60">
+      <div class="title-wrapper">
+          <div *ngIf="current_title==''">Communication</div>
+          <div *ngIf="current_title!=''">{{current_title}}</div>
+        </div>
+      <form [formGroup]="add_communication" (ngSubmit)="CommunicationAdd()">
+          <div>
+            <div>
+              <mat-form-field class="half">
+                <input matInput formControlName="firstname" placeholder="Enter your first name" required>
+                <mat-icon matSuffix>person</mat-icon>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+              <mat-form-field class="half">
+                <input matInput formControlName="lastname" placeholder="Enter your last name" required>
+                <mat-icon matSuffix>person</mat-icon>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+              <mat-form-field class="whole">
+                <input matInput formControlName="phone" placeholder="Enter your phone number" required>
+                <mat-icon matSuffix>phone</mat-icon>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+              <mat-form-field class="whole">
+                <input matInput formControlName="email" placeholder="Enter your E-mail" required>
+                <mat-icon matSuffix>email</mat-icon>
+                <mat-error>This field is required</mat-error>
+              </mat-form-field>
+            </div>
+            <div *ngIf="( add_communication.dirty && add_communication.valid )" class="form-submit">
+              <button *ngIf="current_title==''" type="submit" class="form-button" matTooltip="Add communication">Submit</button>
+              <button *ngIf="current_title!=''" type="button" (click)="update()" class="form-button" matTooltip="Update communication">Update</button>
+              <button *ngIf="current_title!=''" type="button" (click)="delete()" class="form-button" matTooltip="Delete communication">Delete</button>
+              <button type="button" (click)="reset()" class="form-button" matTooltip="Reset the form">Reset</button>
+            </div>
+            <div *ngIf="( !add_communication.dirty || !add_communication.valid )" class="form-submit">
+              <button *ngIf="current_title==''" type="button" class="form-button disabled" matTooltip="Please fill out the form!">Submit</button>
+              <button *ngIf="current_title!=''" type="button" class="form-button disabled" matTooltip="Please fill out the form!">Update</button>
+              <button *ngIf="current_title!=''" type="button" (click)="delete()" class="form-button" matTooltip="Delete communication">Delete</button>
+              <button type="button" (click)="reset()" class="form-button" matTooltip="Reset the form">Reset</button>
+            </div>
+          </div>
+        </form>
+  </div>
+  <div class="right-wrapper" fxFlexOrder="-2" fxFlexOrder.gt-sm="2" fxFlex="40">
+    <div class="right-title">Communication Lists</div>
+    <br>
+    <br>
+    <button *ngFor="let communication of communications" [ngClass]="(communication.id==current_id)?'right-sidebar-button-selected':'right-sidebar-button'" (click)="select(communication)" matTooltip="Select to update communication">
+      <i class="material-icons brown-text-button">keyboard_arrow_right</i>
+      {{ communication.firstname }} {{communication.lastname}}
+    </button>
+    <button class="right-sidebar-button" (click)="addnew()" matTooltip="Add new communication">
+      <i class="material-icons brown-text-button">add</i>
+      New Communication
+    </button>
+
+    
+  </div>
+</div>

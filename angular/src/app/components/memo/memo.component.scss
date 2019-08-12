@@ -1,0 +1,20 @@
+.memo-content {
+  word-break: break-all;
+  color: #8B2E00;
+}
+
+.mat-expansion-panel {
+  background: transparent;
+}
+
+.mat-expansion-panel-header-title {
+  color: #8B2E00;
+}
+
+::ng-deep .specific-class > .mat-expansion-indicator:after {
+  color: #8B2E00;
+}
+
+.mat-expansion-panel[_ngcontent-c5] {
+  background: #ffdfd0;
+}

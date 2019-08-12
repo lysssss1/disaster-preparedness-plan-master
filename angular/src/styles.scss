@@ -1,0 +1,389 @@
+/* You can add global styles to this file, and also import other style files */
+.mat-checkbox-layout {
+  white-space: normal !important;
+}
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+@font-face {
+  font-family: Lato-Regular;
+  src: url('/assets/fonts/Lato/Lato-Regular.ttf');
+}
+
+body {
+  margin: 0 !important;
+  font-family: Lato-Regular, Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-radio-button {
+  font-family: Lato-Regular, Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-sidenav {
+  background: #1d1c1c !important;
+}
+
+.mat-table {
+  background: transparent;
+}
+
+.mat-row {
+  border-bottom-color: transparent;
+}
+
+.mat-header-row {
+  border-bottom-color: transparent;
+}
+
+.mat-cell {
+  color: #8B2E00;
+  font-size: 16px;
+}
+
+.mat-header-cell {
+  color: #8B2E00;
+  font-size: 16px;
+}
+
+.form-title {
+  margin-top: 20px;
+  padding: 0 30px;
+  color: #8B2E00;
+  font-size: 30px;
+}
+
+.title-wrapper {
+  margin: 20px 0;
+  color: #8B2E00;
+  font-size: 30px;
+}
+
+.mat-drawer-container {
+  min-height: 984px;
+  height: 100%;
+  background: #363535;
+}
+
+.content-wrapper {
+  background: #363535;
+  padding: 100px;
+}
+
+.words-wrapper {
+  padding: 50px;
+  color: #8B2E00;
+}
+
+.content {
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #8B2E00;
+  height: 100%;
+}
+
+.right-sidebar-button {
+  line-height: 65px;
+  display: block;
+  border: none;
+  background: none;
+  color: #8B2E00;
+  font-size: 25px;
+}
+
+.right-sidebar-button-selected {
+  line-height: 65px;
+  display: block;
+  border: none;
+  background: none;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5), -1px -1px 1px rgba(255, 255, 255, .5);
+  font-size: 25px;
+}
+
+.right-title {
+  padding-top: 20px;
+  color: #8B2E00;
+  font-size: 30px;
+}
+
+.mat-primary {
+  color: #ffffff;
+}
+
+button {
+  cursor: pointer;
+}
+
+.mat-form-field-wrapper {
+  margin-right: 0 10px;
+}
+
+.mat-form-field-placeholder {
+  color: #8B2E00 !important;
+}
+
+.mat-focused {
+  color: #8B2E00;
+}
+
+.mat-form-field-underline {
+  background-color: #8B2E00;
+}
+
+.mat-form-field-ripple {
+  background-color: #8B2E00;
+}
+
+.mat-radio-label {
+  color: #8B2E00;
+}
+
+.mat-radio-outer-circle {
+  border-color: #8B2E00;
+}
+
+.mat-primary {
+  color: #8B2E00;
+}
+
+.mat-select-value {
+  color: #8B2E00;
+}
+
+.mat-select-arrow {
+  color: #8B2E00 !important;
+}
+
+.mat-checkbox-frame {
+  border-color: #8B2E00;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: #8B2E00;
+}
+
+.mat-hint {
+  color: red;
+}
+
+.mat-checkbox-checkmark-path {
+  stroke: #ffffff !important;
+}
+
+.below-operations {
+  clear: both;
+  float: right;
+  padding: 100px;
+}
+
+.below-single-operation {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.input-qty {
+  background: transparent;
+  border: none;
+  color: #8B2E00;
+  font-size: 16px;
+  text-align: center;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #8B2E00;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: #8B2E00;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+.mat-expansion-panel-header-title {
+  font-size: 26px;
+}
+
+.mat-expansion-panel-content {
+  font-size: 22px !important;
+  line-height: 25px !important;
+}
+
+.mat-tooltip {
+  font-size: 14px !important;
+  background-color: #8B2E00 !important;
+}
+
+.mat-expansion-panel {
+  padding: 10px;
+}
+
+.wrapper {
+  padding: 10px;
+}
+
+.left-wrapper {
+  padding-left: 40px;
+}
+
+.right-wrapper {
+  border-left: 1px solid #8B2E00;
+  padding-left: 40px;
+}
+
+.brown-text-button {
+  color: #8B2E00;
+  vertical-align: middle;
+  margin-bottom: 5px;
+}
+
+.label {
+  margin-top: 20px;
+  padding: 14px;
+  width: 230px;
+  color: white;
+  font-size: 19px;
+  background-repeat: no-repeat;
+  background-size: 230px 50px;
+  text-shadow: black 1px 1px 2px;
+}
+
+.l1 {
+  background-image: url(/assets/images/t1.png);
+}
+
+.l2 {
+  background-image: url(/assets/images/t2.png);
+}
+
+.l3 {
+  background-image: url(/assets/images/t3.png);
+}
+
+.l4 {
+  background-image: url(/assets/images/t4.png);
+}
+
+.l5 {
+  background-image: url(/assets/images/t5.png);
+}
+
+.l6 {
+  background-image: url(/assets/images/t6.png);
+}
+
+.l7 {
+  background-image: url(/assets/images/t7.png);
+}
+
+.l8 {
+  background-image: url(/assets/images/t8.png);
+}
+
+.l9 {
+  background-image: url(/assets/images/t9.png);
+}
+
+.l10 {
+  background-image: url(/assets/images/t10.png);
+}
+
+.l11 {
+  background-image: url(/assets/images/t11.png);
+}
+
+.l12 {
+  background-image: url(/assets/images/t12.png);
+}
+
+.form-button {
+  background: url("/assets/images/bt2-1.png");
+  background-repeat: no-repeat;
+  background-size: 100px 50px;
+  width: 100px;
+  height: 50px;
+  border: none;
+  margin-right: 13px;
+  color: #dfccb8;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, .5), 1px 1px 1px rgba(255, 255, 255, .5);
+  font-size: 20px;
+}
+
+.form-button:active {
+  background: url("/assets/images/bt2-2.png");
+  background-repeat: no-repeat;
+  background-size: 100px 50px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .5), -1px -1px 1px rgba(255, 255, 255, .5);
+  width: 100px;
+  height: 50px;
+}
+
+.disabled {
+  background: url("/assets/images/bt2-3.png");
+  background-repeat: no-repeat;
+  background-size: 100px 50px;
+  width: 100px;
+  height: 50px;
+  color: #676767;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.mat-select-content,
+.mat-select-panel-done-animating {
+  background: #4c1600;
+}
+
+.mat-dialog-title {
+  color: #8B2E00 !important;
+}
+
+.custom-dialog .mat-dialog-container {
+  background-image: url(/assets/images/paper.png) !important;
+  color: #8B2E00 !important;
+}
+
+.half {
+  width: 45%;
+  padding-right: 4%;
+  margin: 15px 0;
+}
+
+.whole {
+  width: 45%;
+  padding-right: 4%;
+  display: block;
+  margin: 15px 0;
+}
+
+@media print {
+  .nottoggled,
+  .nottoggled * {
+    display: none !important;
+  }
+}
+
+/*定义滚动条整体宽高及背景*/
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+  background-color: transparent;
+}
+
+/*定义滚动条的轨道,内阴影及圆角*/
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+/*定义滑块,内阴影及圆角*/
+
+::-webkit-scrollbar-thumb {
+  height: 20px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #EBD8C7;
+}

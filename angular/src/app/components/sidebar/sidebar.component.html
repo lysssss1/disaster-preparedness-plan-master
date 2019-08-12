@@ -1,0 +1,49 @@
+<div class="sidebar-wrapper">
+  <button mat-menu-item class="not-chosen" (click)="router.navigate(['home']);">
+  <span>Home</span>
+</button>
+  <button mat-menu-item [ngClass]="(url=='/family')?'chosen':'not-chosen'" (click)="router.navigate(['family']);">
+  <span>Family Members</span>
+</button>
+  <button mat-menu-item [ngClass]="(url=='/water')?'chosen':'not-chosen'" (click)="router.navigate(['water']);">
+  <span>Water</span>
+</button>
+  <button mat-menu-item [ngClass]="(url=='/food')?'chosen':'not-chosen'" (click)="router.navigate(['food']);">
+  <span>Food Management</span>
+</button>
+  <button mat-menu-item [ngClass]="(url=='/clothing')?'chosen':'not-chosen'" (click)="router.navigate(['clothing']);">
+  <span>Clothing & Bedding</span>
+</button>
+  <!--
+<button mat-menu-item class="not-chosen" (click)="Logout()">
+  <span>First Aid & Medications</span>
+</button>
+-->
+  <button mat-menu-item [ngClass]="(url=='/storage')?'chosen':'not-chosen'" (click)="router.navigate(['storage']);">
+  <span>Storage</span>
+</button>
+  <button mat-menu-item [ngClass]="(url=='/travel')?'chosen':'not-chosen'" (click)="router.navigate(['travel']);">
+  <span>Travel & Office</span>
+</button>
+  <button mat-menu-item [ngClass]="(url=='/authority')?'chosen':'not-chosen'" (click)="router.navigate(['authority']);">
+<span>Emergency Authorities</span>
+</button>
+  <button mat-menu-item [ngClass]="(url=='/communication')?'chosen':'not-chosen'" (click)="router.navigate(['communication']);">
+  <span>Communication</span>
+</button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <button mat-menu-item [ngClass]="(url=='/tips')?'chosen':'not-chosen'" (click)="router.navigate(['tips']);">
+  <span>Tips</span>
+</button>
+  <button mat-menu-item [ngClass]="(url=='/memo')?'chosen':'not-chosen'" (click)="router.navigate(['memo']);">
+  <span>Memo</span>
+</button>
+  <!--
+<button mat-menu-item class="not-chosen" (click)="Logout()">
+  <span>Shopping List</span>
+</button>
+-->
+</div>

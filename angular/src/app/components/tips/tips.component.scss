@@ -1,0 +1,39 @@
+.tips-content {
+  color: #8B2E00;
+  line-height: 40px;
+  font-size: 26px;
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.fix-ul {
+  -webkit-margin-before: 0;
+}
+
+.tips-header {
+  font-size: 30px;
+}
+
+.catalog {
+  color: #8B2E00;
+  display: block;
+  font-size: 26px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.select-member {
+  margin-bottom: -4px;
+  margin-right: 10px;
+}
+
+.menu {
+  height: 400px;
+  top: 100px;
+}
+
+.stick {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}

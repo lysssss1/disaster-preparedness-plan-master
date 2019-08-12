@@ -1,0 +1,100 @@
+<div class="label l11">
+
+  Tips</div>
+<div class="wrapper" fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center" fxLayoutGap="0" fxLayoutGap.xs="0">
+  <div class="left-wrapper" fxFlexOrder="2" fxFlexOrder.gt-sm="1" fxFlex="60">
+    <div class="tips-content">
+      <div id="water" class="tips-header">Water : </div>
+      <ul class="fix-ul">
+        <li>Clean containers</li>
+        <li>Original containers (purchase commercially)</li>
+        <li>Ten drops CL per gallon, stand for 30-60 minutes, boil for 1 min</li>
+        <li>Reuse water for sanitation purposes</li>
+        <li>Treat rain water and ground water</li>
+        <li>Cool before drinking</li>
+        <li>Store water prepared filtering only for 6 months</li>
+        <li>Distilling to make saltwater become drinkable</li>
+      </ul>
+      <br>
+      <div id="food" class="tips-header">Food : </div>
+      <ul class="fix-ul">
+        <li>Keep fresh</li>
+        <li>Kept in sealed air tight containers</li>
+        <li>Easily prepared</li>
+        <li>Expiration date</li>
+      </ul>
+      <br>
+      <div id="clothing" class="tips-header">Clothing & Bedding : </div>
+      <ul class="fix-ul">
+        <li>Always include warm clothing</li>
+        <li>Sleeping bags & mats suited to the weather</li>
+        <li>Use padded ground pads for both comfort and warmth</li>
+        <li>Jackets for 3 days for each person</li>
+      </ul>
+      <br>
+      <div id="med" class="tips-header">First Aid and Medications : </div>
+      <ul class="fix-ul">
+        <li>Special needs households should consider additional items</li>
+        <li>Latex gloves</li>
+        <li>Sterile dressings with tape and bandages</li>
+        <li>Cleansing agents</li>
+        <li>Antibiotic ointment</li>
+        <li>Eye wash</li>
+        <li>Thermometer</li>
+        <li>Splinting supplies</li>
+        <li>Scissors and tweezers</li>
+        <li>Aspirin or non-aspirin pain relievers</li>
+        <li>Antacids</li>
+        <li>Anti-diarrheals</li>
+        <li>Benadryl</li>
+      </ul>
+      <br>
+      <div id="miscellaneous" class="tips-header">Miscellaneous Items : </div>
+      <ul class="fix-ul">
+        <li>Flash lights with extra batteries</li>
+        <li>Tools, a wrench or pliers, along with a hammer and screwdrivers</li>
+        <li>Camp knife</li>
+        <li>Matches in a waterproof container</li>
+        <li>Small mirror for signaling or other uses</li>
+        <li>Whistle to signal for help</li>
+        <li>Moist towelettes</li>
+        <li>Garbage bags and buckets (for sanitation, toileting needs, and other uses)</li>
+        <li>Personal hygiene items</li>
+        <li>Household bleach</li>
+        <li>Copies of important personal and family papers</li>
+        <li>Cash</li>
+        <li>Paper & pencil</li>
+        <li>Favorite books, games, or puzzles for all member of the household</li>
+      </ul>
+      <br>
+      <div id="storage" class="tips-header">Storage : </div>
+      <ul class="fix-ul">
+        <li>Cool, dry, protected place</li>
+        <li>Easy access in an emergency</li>
+      </ul>
+      <br>
+      <div id="bag" class="tips-header">Jump Bag : </div>
+      <ul class="fix-ul">
+        <li>Prepare an evacuation duffle bag or backpack</li>
+      </ul>
+    </div>
+  </div>
+  <div class="right-wrapper menu stick" fxFlexOrder="2" fxFlexOrder.gt-sm="2" fxFlex="40">
+    <div class="right-title">Catalog</div>
+    <br>
+    <div class="catalog" (click)="goTo('water')" matTooltip="Jump to section Water">
+      <i class="material-icons brown-text-button">keyboard_arrow_right</i>&nbsp;Water</div>
+    <div class="catalog" (click)="goTo('food')" matTooltip="Jump to section Food">
+      <i class="material-icons brown-text-button">keyboard_arrow_right</i>&nbsp;Food</div>
+    <div class="catalog" (click)="goTo('clothing')" matTooltip="Jump to section Clothing & Bedding">
+      <i class="material-icons brown-text-button">keyboard_arrow_right</i>&nbsp;Clothing & Bedding</div>
+    <div class="catalog" (click)="goTo('med')" matTooltip="Jump to section First Aid and Medications">
+      <i class="material-icons brown-text-button">keyboard_arrow_right</i>&nbsp;First Aid and Medications</div>
+    <div class="catalog" (click)="goTo('miscellaneous')" matTooltip="Jump to section Miscellaneous Items">
+      <i class="material-icons brown-text-button">keyboard_arrow_right</i>&nbsp;Miscellaneous Items</div>
+    <div class="catalog" (click)="goTo('storage')" matTooltip="Jump to section Storage">
+      <i class="material-icons brown-text-button">keyboard_arrow_right</i>&nbsp;Storage</div>
+    <div class="catalog" (click)="goTo('bag')" matTooltip="Jump to section Jump Bag">
+      <i class="material-icons brown-text-button">keyboard_arrow_right</i>&nbsp;Jump Bag</div>
+  </div>
+</div>

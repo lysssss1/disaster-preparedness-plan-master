@@ -1,0 +1,10 @@
+Disaster Preparedness Plan
+
+图表：http://www.chartjs.org/samples/latest/
+
+表格，配色：https://material.angular.io/components/form-field/overview
+
+https://galactic.ink/bg/
+rocks002
+EA4F00
+6B1F00

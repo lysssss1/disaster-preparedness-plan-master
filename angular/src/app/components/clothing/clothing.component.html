@@ -1,0 +1,43 @@
+
+
+<div class="label l6">Clothing & Bedding</div>
+<div class="wrapper" fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center" fxLayoutGap="0" fxLayoutGap.xs="0">
+  <div class="left-wrapper" fxFlexOrder="2" fxFlexOrder.gt-sm="1" fxFlex="60">
+    <div class="title-wrapper">
+      Weather
+    </div>
+    <div>
+      <div style="width: 400px;"><iframe style="display: block;" src="https://cdnres.willyweather.com/widget/loadView.html?id=82958" width="400" height="520" frameborder="0"  scrolling="no"></iframe><a style="display: block;position: relative;margin: -20px 0 0 0;height: 20px;z-index: 1;text-indent: -9999em" href="https://www.willyweather.com/pa/allegheny-county/squirrel-hill.html" rel="nofollow">squirrel hill's weather</a></div>
+    </div>
+  </div>
+  <div class="right-wrapper" fxFlexOrder="-2" fxFlexOrder.gt-sm="2" fxFlex="40">
+    <div class="title-wrapper">
+      Clothing & Bedding
+    </div>
+    <mat-table #table1 [dataSource]="dataSource">
+      <ng-container matColumnDef="type">
+        <mat-header-cell *matHeaderCellDef> Type </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.type}} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="quantity">
+        <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          <input class="input-qty" type="number" min='0' max='99' [(ngModel)]="element.quantity" (change)="update(element.id,element.quantity)" width="30px">
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>
+</div>
+<div class="cb-tips-content">
+  Tips:
+  <ul>
+    <li>
+      You need to input your city location manually, and then the widget will show you the weather information about the city.
+    </li>
+    <li>
+      It contains the weather condition for the following week. (Not the date you selected in the home page)
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,325 @@
+<div class="text">
+  <br />
+  <div class="label l2 toggle" [ngClass]="{'nottoggled': !show[1]}" (click)='toggle(1)'>Basic Information</div>
+  <div *ngIf="show[1]" class="inner-print">
+    <table style="width:100%">
+      <tr>
+        <th width="50%">Location</th>
+        <th width="50%">Days</th>
+      </tr>
+      <tr>
+        <td width="50%">{{location}}</td>
+        <td width="50%">{{days}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="label l3 toggle" [ngClass]="{'nottoggled': !show[2]}" (click)='toggle(2)'>Family Members</div>
+  <div *ngIf="show[2]" class="inner-print">
+    <table style="width:100%">
+      <tr>
+        <th width="20%">First Name</th>
+        <th width="20%">Last Name</th>
+        <th width="20%">gender</th>
+        <th width="20%">phone</th>
+        <th width="20%">health</th>
+      </tr>
+      <tr *ngFor="let human of humans">
+        <td width="20%">{{human.firstname}}</td>
+        <td width="20%">{{human.lastname}}</td>
+        <td width="20%">{{human.gender}}</td>
+        <td width="20%">{{human.phone}}</td>
+        <td width="20%">{{human.health}}</td>
+      </tr>
+    </table>
+    <br>
+    <table style="width:100%">
+      <tr>
+        <th width="33%">Pet Name</th>
+        <th width="33%">Pet Type</th>
+        <th width="33%">Weight</th>
+      </tr>
+      <tr *ngFor="let pet of pets">
+        <td width="33%">{{pet.petname}}</td>
+        <td width="33%">{{pet.pettype}}</td>
+        <td width="33%">{{pet.weight}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="label l4 toggle" [ngClass]="{'nottoggled': !show[3]}" (click)='toggle(3)'>Water</div>
+  <div *ngIf="show[3]" class="inner-print">
+    <table style="width:100%">
+      <tr>
+        <th width="50%">Activities</th>
+        <th width="50%">Amount</th>
+      </tr>
+      <tr>
+        <td width="50%">For Drinking</td>
+        <td width="50%">{{drinkwater.toFixed(2)}} Gallons</td>
+      </tr>
+      <tr>
+        <td width="50%">For Food Preparation, Sanitation and Other Activities</td>
+        <td width="50%">{{foodwater.toFixed(2)}} Gallons</td>
+      </tr>
+      <tr>
+        <td width="50%">For Pets</td>
+        <td width="50%">{{petwater.toFixed(2)}} Gallons</td>
+      </tr>
+      <tr>
+        <td width="50%">Total</td>
+        <td width="50%">{{(drinkwater+foodwater+petwater).toFixed(2)}} Gallons</td>
+      </tr>
+    </table>
+  </div>
+  <div class="label l5 toggle" [ngClass]="{'nottoggled': !show[4]}" (click)='toggle(4)'>Food</div>
+  <div *ngIf="show[4]" class="inner-print">
+    <table style="width:100%">
+      <tr>
+        <th width="25%">Food Type</th>
+        <th width="25%">Calories</th>
+        <th width="25%">Quantity</th>
+        <th width="25%">Sum</th>
+      </tr>
+      <tr *ngFor="let food of foods">
+        <td *ngIf="food.quantity" width="25%">{{food.type}}</td>
+        <td *ngIf="food.quantity" width="25%">{{food.calories}}</td>
+        <td *ngIf="food.quantity" width="25%">{{food.quantity}}</td>
+        <td *ngIf="food.quantity" width="25%">{{food.quantity * food.calories}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="label l6 toggle" [ngClass]="{'nottoggled': !show[5]}" (click)='toggle(5)'>Clothing & Bedding</div>
+  <div *ngIf="show[5]" class="inner-print">
+    <table style="width:100%">
+      <tr>
+        <th width="50%">Clothing & Bedding</th>
+        <th width="50%">Quantity</th>
+      </tr>
+      <tr *ngFor="let clothing of clothings">
+        <td *ngIf="clothing.quantity!==0" width="50%">{{clothing.type}}</td>
+        <td *ngIf="clothing.quantity!==0" width="50%">{{clothing.quantity}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="label l7 toggle" [ngClass]="{'nottoggled': !show[6]}" (click)='toggle(6)'>Storage</div>
+  <div *ngIf="show[6]" class="inner-print">
+    Store all items in a cool, dry, protected place with easy access in an emergency.
+    <ul>
+      <li>
+        Store the supplies near an exit to facilitate loading into vehicles if forced to leave quickly.
+      </li>
+      <br />
+      <li>
+        Storage place depends on the risks prone to the area:
+        <br> Wind storms : keep the supplies in the basement
+        <br> Flooding : store items on upper floors
+        <br> Smaller homes and apartments : concern about the store space
+      </li>
+    </ul>
+  </div>
+  <div class="label l8 toggle" [ngClass]="{'nottoggled': !show[7]}" (click)='toggle(7)'>Travel & Office</div>
+  <div *ngIf="show[7]" class="inner-print">
+    <table style="width:100%">
+      <tr>
+        <th width="100%">Travel & Office</th>
+      </tr>
+      <tr *ngFor="let traveltip of traveltips">
+        <td *ngIf="traveltip.selected" width="100%">√ {{traveltip.name}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="label l9 toggle" [ngClass]="{'nottoggled': !show[8]}" (click)='toggle(8)'>Emergency Authorities</div>
+  <div *ngIf="show[8]" class="inner-print">
+    <iframe class="map" width="100%" height="600px" frameborder="0" style="border:0" [src]=trusturl allowfullscreen></iframe>
+  </div>
+  <div class="label l10 toggle" [ngClass]="{'nottoggled': !show[9]}" (click)='toggle(9)'>Communication</div>
+  <div *ngIf="show[9]" class="inner-print">
+    <table style="width:100%">
+      <tr>
+        <th width="25%">First Name</th>
+        <th width="25%">Last Name</th>
+        <th width="25%">Phone</th>
+        <th width="25%">Email</th>
+      </tr>
+      <tr *ngFor="let communication of communications">
+        <td width="25%">{{communication.firstname}}</td>
+        <td width="25%">{{communication.lastname}}</td>
+        <td width="25%">{{communication.phone}}</td>
+        <td width="25%">{{communication.email}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="label l11 toggle" [ngClass]="{'nottoggled': !show[10]}" (click)='toggle(10)'>Tips</div>
+  <div *ngIf="show[10]" class="inner-print">
+    <table style="width:100%">
+      <tr>
+        <th width="25%">Categories</th>
+        <th width="75%">Tips</th>
+      </tr>
+      <tr>
+        <td width="25%" rowspan="8">Water</td>
+        <td width="75%">Clean containers</td>
+      </tr>
+      <tr>
+        <td width="75%">Original containers (purchase commercially)</td>
+      </tr>
+      <tr>
+        <td width="75%">Ten drops CL per gallon, stand for 30-60 minutes, boil for 1 min</td>
+      </tr>
+      <tr>
+        <td width="75%">Reuse water for sanitation purposes</td>
+      </tr>
+      <tr>
+        <td width="75%">Treat rain water and ground water</td>
+      </tr>
+      <tr>
+        <td width="75%">Cool before drinking</td>
+      </tr>
+      <tr>
+        <td width="75%">Store water prepared filtering only for 6 months</td>
+      </tr>
+      <tr>
+        <td width="75%">Distilling to make saltwater become drinkable</td>
+      </tr>
+      <tr>
+        <td width="25%" rowspan="4">Food</td>
+        <td width="75%">Keep fresh</td>
+      </tr>
+      <tr>
+        <td width="75%">Kept in sealed air tight containers</td>
+      </tr>
+      <tr>
+        <td width="75%">Easily prepared</td>
+      </tr>
+      <tr>
+        <td width="75%">Expiration date</td>
+      </tr>
+      <tr>
+        <td width="25%" rowspan="4">Clothing & Bedding</td>
+        <td width="75%">Always include warm clothing</td>
+      </tr>
+      <tr>
+        <td width="75%">Sleeping bags & mats suited to the weather</td>
+      </tr>
+      <tr>
+        <td width="75%">Use padded ground pads for both comfort and warmth</td>
+      </tr>
+      <tr>
+        <td width="75%">Jackets for 3 days for each person</td>
+      </tr>
+      <tr>
+        <td width="25%" rowspan="13">First Aid and Medications</td>
+        <td width="75%">Special needs households should consider additional items</td>
+      </tr>
+      <tr>
+        <td width="75%">Latex gloves</td>
+      </tr>
+      <tr>
+        <td width="75%">Sterile dressings with tape and bandages</td>
+      </tr>
+      <tr>
+        <td width="75%">Cleansing agents</td>
+      </tr>
+      <tr>
+        <td width="75%">Antibiotic ointment</td>
+      </tr>
+      <tr>
+        <td width="75%">Eye wash</td>
+      </tr>
+      <tr>
+        <td width="75%">Thermometer</td>
+      </tr>
+      <tr>
+        <td width="75%">Splinting supplies</td>
+      </tr>
+      <tr>
+        <td width="75%">Scissors and tweezers</td>
+      </tr>
+      <tr>
+        <td width="75%">Aspirin or non-aspirin pain relievers</td>
+      </tr>
+      <tr>
+        <td width="75%">Antacids</td>
+      </tr>
+      <tr>
+        <td width="75%">Anti-diarrheals</td>
+      </tr>
+      <tr>
+        <td width="75%">Benadryl</td>
+      </tr>
+      <tr>
+        <td width="25%" rowspan="14">Miscellaneous Items</td>
+        <td width="75%">Flash lights with extra batteries</td>
+      </tr>
+      <tr>
+        <td width="75%">Tools, a wrench or pliers, along with a hammer and screwdrivers</td>
+      </tr>
+      <tr>
+        <td width="75%">Camp knife</td>
+      </tr>
+      <tr>
+        <td width="75%">Matches in a waterproof container</td>
+      </tr>
+      <tr>
+        <td width="75%">Small mirror for signaling or other uses</td>
+      </tr>
+      <tr>
+        <td width="75%">Whistle to signal for help</td>
+      </tr>
+      <tr>
+        <td width="75%">Moist towelettes</td>
+      </tr>
+      <tr>
+        <td width="75%">Garbage bags and buckets (for sanitation, toileting needs, and other uses)</td>
+      </tr>
+      <tr>
+        <td width="75%">Personal hygiene items</td>
+      </tr>
+      <tr>
+        <td width="75%">Household bleach</td>
+      </tr>
+      <tr>
+        <td width="75%">Copies of important personal and family papers</td>
+      </tr>
+      <tr>
+        <td width="75%">Cash</td>
+      </tr>
+      <tr>
+        <td width="75%">Paper & pencil</td>
+      </tr>
+      <tr>
+        <td width="75%">Favorite books, games, or puzzles for all member of the household</td>
+      </tr>
+      <tr>
+        <td width="25%" rowspan="2">Storage</td>
+        <td width="75%">Cool, dry, protected place</td>
+      </tr>
+      <tr>
+        <td width="75%">Easy access in an emergency</td>
+      </tr>
+      <tr>
+        <td width="25%" rowspan="1">Jump Bag</td>
+        <td width="75%">Prepare an evacuation duffle bag or backpack</td>
+      </tr>
+    </table>
+  </div>
+  <div class="label l12 toggle" [ngClass]="{'nottoggled': !show[11]}" (click)='toggle(11)'>Memo</div>
+  <div *ngIf="show[11]" class="inner-print">
+    <table style="width:100%">
+      <tr>
+        <th width="25%">Title</th>
+        <th width="75%">Content</th>
+      </tr>
+      <tr *ngFor="let memo of memos">
+        <td width="25%">{{memo.title}}</td>
+        <td width="75%">{{memo.content}}</td>
+      </tr>
+    </table>
+  </div>
+  <br />
+  <br />
+  <div class="side-tool nottoggled" fxHide fxShow.gt-xs>
+    <mat-icon class="side-button" (click)='up()'>keyboard_arrow_up</mat-icon>
+    <mat-icon class="side-button" (click)='print()' matTooltip="Print the page.">print</mat-icon>
+    <mat-icon class="side-button" (click)='down()'>keyboard_arrow_down</mat-icon>
+  </div>
+</div>

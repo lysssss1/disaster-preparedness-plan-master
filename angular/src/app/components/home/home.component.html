@@ -1,0 +1,65 @@
+<div class="index-bg">
+  <div class="wrapper" fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="center" fxLayoutGap="0" fxLayoutGap.xs="0">
+    <div class="index-left" fxFlex="50">
+      <img [ngClass]="['fix-logo']" ngClass.gt-sm="logo" ngClass.md="logo-md" src="/assets/images/index-logo.png" alt="Disaster Preparedness Plan"
+      />
+    </div>
+    <div class="index-right" fxFlex="50">
+      <div class="book-wrapper" [ngClass]="['fix-book']" ngClass.gt-md="book">
+        <div class="form-wrapper">
+          <div class="inner-form">
+            <mat-tab-group color="warn">
+              <mat-tab label="Login" class="scroll-hidden">
+                <form [formGroup]="login_form" (ngSubmit)="Login()">
+                  <br>
+                  <mat-form-field class="form-input">
+                    <input matInput formControlName="username" placeholder="Enter your username" required>
+                    <mat-error>This field is required</mat-error>
+                  </mat-form-field>
+                  <mat-form-field class="form-input">
+                    <input matInput formControlName="password" placeholder="Enter your password" [type]="hide2 ? 'password' : 'text'" required>
+                    <mat-icon matSuffix (click)="hide2 = !hide2">{{hide2 ? 'visibility' : 'visibility_off'}}</mat-icon>
+                  </mat-form-field>
+                  <br>
+                  <br>
+                  <div *ngIf="!( !login_form.dirty || !login_form.valid )" class="form-submit center">
+                    <button type="submit" class="form-button" matTooltip="Login">Login</button>
+                  </div>
+                  <div *ngIf="( !login_form.dirty || !login_form.valid )" class="form-submit center">
+                    <button type="button" class="form-button disabled" matTooltip="Please fill out the form!">Login</button>
+                  </div>
+                </form>
+              </mat-tab>
+              <mat-tab label="Register" class="scroll-hidden">
+                  <form [formGroup]="register_form" (ngSubmit)="Register()">
+                    <br>
+                    <mat-form-field class="form-input">
+                      <input matInput formControlName="username" placeholder="Enter your username" required>
+                      <mat-error>This field is required</mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="form-input">
+                      <input matInput formControlName="password" placeholder="Enter your password" [type]="hide2 ? 'password' : 'text'" required>
+                      <mat-icon matSuffix (click)="hide2 = !hide2">{{hide2 ? 'visibility' : 'visibility_off'}}</mat-icon>
+                    </mat-form-field>
+                    <mat-form-field class="form-input">
+                        <input matInput formControlName="confirm" placeholder="Re-Enter your password" [type]="hide2 ? 'password' : 'text'" required>
+                        <mat-hint *ngIf="register_form.get('password').value!=register_form.get('confirm').value">
+                          Password does not match.
+                        </mat-hint>
+                      </mat-form-field>
+                    <br>
+                    <div *ngIf="!( !register_form.dirty || !register_form.valid )" class="form-submit center">
+                      <button type="submit" class="form-button" matTooltip="Register">Register</button>
+                    </div>
+                    <div *ngIf="( !register_form.dirty || !register_form.valid )" class="form-submit center">
+                      <button type="button" class="form-button disabled" matTooltip="Please fill out the form!">Register</button>
+                    </div>
+                  </form>
+                </mat-tab>
+            </mat-tab-group>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
